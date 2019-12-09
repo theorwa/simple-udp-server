@@ -89,6 +89,9 @@ int main(void)
             die("recvfrom()");
         }
 
+        // limit the buf at the end of the word from client
+        buf[recv_len] = '\0';
+
         // print details of the client/peer and the data received
         
         /*
